@@ -3,31 +3,48 @@ $headings-font-family: "Roboto Condensed", "Arial Narrow", "Segoe UI", sans-seri
 $headings-font-weight: 700;
 $link-decoration: none;
 
-$primary: #8da8f3;
-$secondary: #8fb8a6;
-$success: #9ecfb8;
-$info: #9fc7d8;
-$warning: #efd8a2;
-$danger: #e7b0ad;
+$primary: #c8006e;
+$secondary: #7e6576;
+$success: #7fae98;
+$info: #8ba8c7;
+$warning: #d4a85c;
+$danger: #c9829a;
 $light: #fffaf6;
-$dark: #5f6f73;
+$dark: #4f4350;
 $body-bg: #fffdfb;
-$body-color: #5f6368;
+$body-color: #4f4750;
 
-$surface-soft: #f6f2fb;
-$surface-panel: rgba(255, 250, 246, 0.84);
-$surface-page-top: #fdf7f2;
-$surface-page-mid: #f6f0fb;
-$surface-page-bottom: #fbfcf8;
-$surface-hero: #eef2fb;
+$surface-soft: #fbf1f7;
+$surface-panel: rgba(255, 248, 251, 0.86);
+$surface-page-top: #fff6f8;
+$surface-page-mid: #f8f0f7;
+$surface-page-bottom: #fcfbf8;
+$surface-hero: #f7ecf3;
 $surface-card: #fffdf9;
-$surface-dark-panel: #5e6f78;
+$surface-dark-panel: #544551;
+$surface-mesh-1: rgba(200, 0, 110, 0.16);
+$surface-mesh-2: rgba(139, 168, 199, 0.18);
+$surface-mesh-3: rgba(189, 211, 198, 0.16);
+$surface-mesh-4: rgba(216, 184, 214, 0.2);
+$glass-light: rgba(255, 255, 255, 0.46);
+$glass-light-strong: rgba(255, 255, 255, 0.62);
+$glass-dark: rgba(84, 69, 81, 0.58);
+$glass-border-light: rgba(255, 255, 255, 0.42);
+$glass-border-dark: rgba(255, 255, 255, 0.14);
+$glass-highlight: rgba(255, 255, 255, 0.22);
+$glass-blur: 20px;
+$glass-shadow: 0 1.25rem 2.8rem rgba(89, 61, 79, 0.14);
 
-$accent-lilac: #c8b8f2;
-$accent-sage: #b9d3c3;
-$accent-peach: #f3c6b8;
-$accent-butter: #f5e5b8;
-$accent-sky: #bfdceb;
+$accent-lilac: #d8b8d6;
+$accent-sage: #bdd3c6;
+$accent-peach: #efc0b7;
+$accent-butter: #f1dfb0;
+$accent-sky: #c3d6eb;
+
+$text-strong: #3b3138;
+$text-muted: #655b63;
+$text-on-dark: #fff7fb;
+$text-on-dark-muted: rgba(255, 247, 251, 0.76);
 
 $shadow-soft: 0 1rem 2.4rem rgba(126, 123, 146, 0.12);
 $shadow-strong: 0 2rem 4rem rgba(126, 123, 146, 0.18);
@@ -44,8 +61,8 @@ $content-max-width: 40rem;
 $panel-border-color: rgba($primary, 0.08);
 $eyebrow-background: rgba(255, 255, 255, 0.16);
 $hero-overlay:
-  linear-gradient(90deg, rgba(96, 111, 115, 0.68) 0%, rgba(96, 111, 115, 0.2) 60%, rgba(96, 111, 115, 0.06) 100%);
+  linear-gradient(90deg, rgba(79, 67, 80, 0.8) 0%, rgba(79, 67, 80, 0.3) 60%, rgba(79, 67, 80, 0.08) 100%);
 $page-background:
   radial-gradient(circle at top left, rgba($primary, 0.12), transparent 24%),
-  radial-gradient(circle at top right, rgba($accent-peach, 0.16), transparent 28%),
+  radial-gradient(circle at top right, rgba($accent-lilac, 0.18), transparent 28%),
   linear-gradient(180deg, $surface-page-top 0%, $surface-page-mid 52%, $surface-page-bottom 100%);

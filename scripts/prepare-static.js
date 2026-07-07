@@ -6,6 +6,7 @@ const publicDir = path.join(rootDir, "public");
 const srcJsDir = path.join(rootDir, "src", "js");
 const srcAssetsDir = path.join(rootDir, "src", "assets");
 const vendorDir = path.join(publicDir, "assets", "vendor");
+const syncCmsTemplate = require("./sync-cms-template");
 
 const vendorCopies = [
   {
@@ -121,7 +122,9 @@ async function prepareStaticFiles() {
   ]);
 }
 
-prepareStaticFiles().catch((error) => {
-  console.error("Failed to prepare static files.", error);
-  process.exit(1);
-});
+prepareStaticFiles()
+  .then(() => syncCmsTemplate())
+  .catch((error) => {
+    console.error("Failed to prepare static files.", error);
+    process.exit(1);
+  });

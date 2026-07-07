@@ -10,6 +10,10 @@
     <meta name="author" content="<% $meta.author %>">
     <meta name="robots" content="<% $meta.robots %>">
     <meta name="generator" content="Keimeno CMS">
+    <% include file="fe_og-meta-tags.tpl" %>
+    <link rel="stylesheet" href="<%$PATH_CMS%>file_data/template/assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="<%$PATH_CMS%>file_data/template/assets/vendor/slick/slick.css">
+    <link rel="stylesheet" href="<%$PATH_CMS%>file_data/template/assets/vendor/fancybox/fancybox.css">
     <link rel="stylesheet" href="<%$PATH_CMS%>file_data/template/css/main.css">
   </head>
-  <body <% $document_protection %> id="start" role="application">
+  <body <% $document_protection %> id="start" class="cms-theme" role="application">

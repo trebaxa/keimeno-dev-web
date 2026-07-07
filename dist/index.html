@@ -852,6 +852,150 @@
   </div>
 </section>
 
+      <section class="section-space contact-section" id="contact" role="region" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-9">
+        <h2 class="section-title" id="contact-heading">Kontaktformular</h2>
+        <p class="lead mt-3 text-secondary mb-0">Nehmen Sie Kontakt auf.</p>
+      </div>
+    </div>
+
+    <div class="fmrcontactthx contact-card p-4 mb-4" style="display: none;" aria-hidden="true">
+      <h2 class="h4">Vielen Dank fuer Ihre Nachricht!</h2>
+      <p class="mb-0">Wir werden uns umgehend mit Ihnen in Verbindung setzen.</p>
+    </div>
+
+    <noscript>
+      <div class="alert alert-danger" role="alert">
+        Aktivieren Sie JavaScript, um das Kontaktformular zu nutzen.
+      </div>
+    </noscript>
+
+    <div class="row g-4 align-items-start">
+      <div class="col-12 col-lg-8">
+        <form action="#" method="post" enctype="multipart/form-data" id="js-contact-demo" class="fmrcontactform jsonform contact-card contact-form p-4 p-lg-5" role="form">
+          <input type="hidden" name="cmd" value="sendmsg">
+          <input type="hidden" name="ajaxsubmit" value="1">
+          <input type="hidden" value="" name="email" class="hidden" aria-hidden="true" tabindex="-1">
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="contact-first-name">Vorname*</label>
+                <input type="text" required class="form-control" id="contact-first-name" placeholder="Vorname" name="FORM_NOTEMPTY[vorname]" aria-required="true">
+                <input type="hidden" name="FORM_LABEL[vorname]" value="Vorname">
+              </div>
+              <div class="form-group">
+                <label for="contact-last-name">Nachname*</label>
+                <input type="text" required class="form-control" id="contact-last-name" placeholder="Nachname" name="FORM_NOTEMPTY[nachname]" aria-required="true">
+                <input type="hidden" name="FORM_LABEL[nachname]" value="Nachname">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="contact-email">E-Mail*</label>
+                <input data-event="check-email" type="email" required class="required form-control" id="contact-email" placeholder="E-Mail" name="FORM[tschapura]" aria-required="true">
+                <input type="hidden" name="FORM_LABEL[email]" value="E-Mail">
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Rueckrufnummer*</label>
+                <input type="text" required class="form-control" id="contact-phone" placeholder="Ihre Rueckrufnummer" name="FORM[tel]" aria-required="true">
+                <input type="hidden" name="FORM_LABEL[tel]" value="Rueckrufnummer">
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-upload-group my-4" aria-labelledby="contact-upload-heading">
+            <h3 class="h5 mb-2" id="contact-upload-heading">Dateien anhaengen</h3>
+            <p class="small text-secondary mb-3">Fuegen Sie relevante Dokumente oder Bilder zur Anfrage hinzu.</p>
+            <div class="upload-field mb-0">
+              <label class="form-label" for="contact-file">
+                <i class="fa-solid fa-paperclip me-2" aria-hidden="true"></i>Datei auswaehlen
+              </label>
+              <input type="file" class="form-control js-file-input" id="contact-file" name="datei[]" multiple aria-describedby="contact-file-help">
+              <div class="form-text" id="contact-file-help">Mehrfachauswahl ist moeglich.</div>
+              <div class="selected-file-list small text-secondary mt-2" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <fieldset class="form-group" aria-describedby="contact-secode-help">
+            <legend class="h6 mb-2">Sicherheitscode <span aria-hidden="true">*</span></legend>
+            <p class="mb-2" id="contact-secode-question">
+              Aufgabe: <strong>6 + 5</strong>
+            </p>
+            <p class="text-secondary small mb-2" id="contact-secode-help">
+              Bitte loesen Sie die Rechenaufgabe und tragen Sie nur das Ergebnis ein.
+            </p>
+            <label for="contact-secode" class="form-label">Code Eingabe</label>
+            <input
+              placeholder="Code Eingabe"
+              id="contact-secode"
+              autocomplete="off"
+              required
+              name="securecode"
+              class="form-control"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              aria-describedby="contact-secode-help contact-secode-question"
+              aria-required="true"
+            >
+          </fieldset>
+
+          <div class="form-group">
+            <label for="contact-message">Nachricht*</label>
+            <textarea class="form-control" id="contact-message" placeholder="Ihre Nachricht" required rows="6" name="FORM_NOTEMPTY[nachricht]" aria-required="true"></textarea>
+            <input type="hidden" name="FORM_LABEL[nachricht]" value="Nachricht">
+          </div>
+
+          <div class="form-check mb-3">
+            <input type="checkbox" name="disclaimer_check-1" class="form-check-input js-disclaimer-check" value="1" required id="contact-disclaimer-1" aria-required="true">
+            <label class="form-check-label" for="contact-disclaimer-1">
+              Ich bin mit der Verarbeitung meiner angegebenen Daten zum Zwecke der Bearbeitung meiner Anfrage einverstanden.
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <input type="checkbox" name="disclaimer_check-2" class="form-check-input js-disclaimer-check" value="1" required id="contact-disclaimer-2" aria-required="true">
+            <label class="form-check-label" for="contact-disclaimer-2">
+              Ich habe die <a href="#" title="Datenschutzerklaerung">Datenschutzerklaerung</a> von Keimeno zur Kenntnis genommen.
+            </label>
+          </div>
+          <div class="form-check mb-4">
+            <input type="checkbox" name="disclaimer_check-3" class="form-check-input js-disclaimer-check" value="1" required id="contact-disclaimer-3" aria-required="true">
+            <label class="form-check-label" for="contact-disclaimer-3">
+              Ich bin darueber belehrt worden, dass ich meine Einwilligung in die Verarbeitung meiner Daten jederzeit widerrufen kann.
+            </label>
+          </div>
+
+          <input type="submit" class="btn btn-primary mt-3" value="senden" id="js-btn-send" disabled aria-disabled="true">
+        </form>
+      </div>
+
+      <div class="col-12 col-lg-4">
+        <aside class="contact-card contact-aside p-4" aria-label="Kontaktinformationen">
+          <h3>Buerozeiten</h3>
+          <p>Montags bis Freitags 09:00 - 18:00 Uhr.</p>
+          <h3>Anschrift</h3>
+          <p>
+            Keimeno<br>
+            Stiftstr. 40<br>
+            35037 Marburg
+          </p>
+          <h3>Kontakt</h3>
+          <p>
+            Telefon:
+            <a href="tel:00496421555333111" title="Telefonnummer 00496421555333111">00496421555333111</a><br>
+            Fax: 00496421555333112<br>
+            E-Mail:
+            <a title="Kontakt" href="mailto:test@trebaxa.com">test@trebaxa.com</a>
+          </p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
 
     <footer class="site-footer text-white py-5 mt-5">

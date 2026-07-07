@@ -1,0 +1,70 @@
+@use "./variables" as *;
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  min-height: 100vh;
+}
+
+.site-header {
+  background:
+    radial-gradient(circle at top left, rgba($primary, 0.18), transparent 35%),
+    linear-gradient(135deg, #f8fbff 0%, #eef4ff 52%, #ffffff 100%);
+}
+
+.hero {
+  padding: 6rem 0 5rem;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background-color: rgba($primary, 0.1);
+  color: $primary;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.hero__card {
+  border: 0;
+  border-radius: 1.5rem;
+  box-shadow: 0 1.5rem 3rem rgba(15, 23, 42, 0.12);
+}
+
+.content-section {
+  padding: 5rem 0;
+}
+
+.feature-card {
+  height: 100%;
+  border: 0;
+  border-radius: 1.25rem;
+  box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-0.35rem);
+  box-shadow: 0 1.5rem 3rem rgba(15, 23, 42, 0.12);
+}
+
+.slider-card {
+  margin: 0 0.75rem;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  background-color: $light;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  height: inherit;
+}
+
+.site-footer {
+  background-color: $dark;
+}

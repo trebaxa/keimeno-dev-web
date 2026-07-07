@@ -1,0 +1,61 @@
+{
+  "name": "keimeno-dev-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js web project with Express, EJS, Bootstrap 5, SCSS, BrowserSync, GSAP, Font Awesome, and Slick Slider.",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm-run-all clean:public prepare-static --parallel watch:styles watch:static serve dev:browser",
+    "serve": "nodemon server.js",
+    "dev:browser": "browser-sync start --proxy http://localhost:3000 --files \"views/**/*.ejs,public/**/*.{css,js,png,jpg,jpeg,gif,svg,webp,ico}\" --port 3001 --no-ui --no-notify --browser \"default\"",
+    "watch:styles": "sass --watch --style=expanded --no-source-map --quiet-deps --silence-deprecation=import,global-builtin,color-functions src/scss/main.scss public/css/main.css",
+    "watch:static": "chokidar \"src/js/**/*\" \"src/assets/**/*\" -c \"node scripts/prepare-static.js\"",
+    "prepare-static": "node scripts/prepare-static.js",
+    "clean:public": "node scripts/clean-public.js",
+    "build": "npm-run-all build:clean build:styles build:static build:render",
+    "build:clean": "rimraf dist",
+    "build:styles": "sass --style=compressed --no-source-map --quiet-deps --silence-deprecation=import,global-builtin,color-functions src/scss/main.scss dist/css/main.css",
+    "build:static": "node scripts/build-static.js",
+    "build:render": "node scripts/render-pages.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "ejs",
+    "bootstrap",
+    "scss"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "bootstrap": "^5.3.8",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "gsap": "^3.13.0",
+    "jquery": "^3.7.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "chokidar-cli": "^3.0.0",
+    "fs-extra": "^11.3.2",
+    "nodemon": "^3.1.10",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.10",
+    "sass": "^1.89.2"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "server.js",
+      "views"
+    ],
+    "ext": "js,ejs,json",
+    "ignore": [
+      "public",
+      "dist",
+      "node_modules",
+      "src"
+    ]
+  }
+}

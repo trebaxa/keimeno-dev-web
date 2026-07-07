@@ -1,0 +1,30 @@
+<section class="section-space" id="security">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2 class="section-title"><%= homepage.progress.title %></h2>
+      </div>
+    </div>
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <img src="<%= homepage.progress.image %>" class="img-fluid rounded-4 shadow-sm" alt="<%= homepage.progress.title %>">
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2">
+        <p class="text-secondary fs-5"><%= homepage.progress.text %></p>
+        <div class="progress-stack">
+          <% homepage.progress.bars.forEach((bar) => { %>
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small text-secondary mb-2">
+                <span><%= bar.label %></span>
+                <span><%= bar.value %>%</span>
+              </div>
+              <div class="progress progress-modern">
+                <div class="progress-bar <%= bar.className %>" style="width: <%= bar.value %>%"></div>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

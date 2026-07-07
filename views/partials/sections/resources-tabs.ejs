@@ -1,0 +1,68 @@
+<section class="resource-section" id="resources">
+  <div class="container py-5">
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2 class="section-title">Resources and databases</h2>
+      </div>
+    </div>
+  </div>
+  <div class="resource-section__dark">
+    <div class="container py-5">
+      <ul class="nav nav-pills resource-pills mb-4" id="resourceTabs" role="tablist">
+        <% homepage.resourceGroups.forEach((group, groupIndex) => { %>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link <%= groupIndex === 0 ? 'active' : '' %>"
+              id="resource-<%= group.id %>-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#resource-<%= group.id %>"
+              type="button"
+              role="tab"
+              aria-controls="resource-<%= group.id %>"
+              aria-selected="<%= groupIndex === 0 ? 'true' : 'false' %>"
+            >
+              <%= group.label %>
+            </button>
+          </li>
+        <% }) %>
+      </ul>
+
+      <div class="tab-content">
+        <% homepage.resourceGroups.forEach((group, groupIndex) => { %>
+          <div
+            class="tab-pane fade <%= groupIndex === 0 ? 'show active' : '' %>"
+            id="resource-<%= group.id %>"
+            role="tabpanel"
+            aria-labelledby="resource-<%= group.id %>-tab"
+          >
+            <div class="resource-slider js-resource-slider">
+              <% group.slides.forEach((slide) => { %>
+                <article class="resource-slide">
+                  <div class="row g-4 align-items-start">
+                    <div class="col-lg-4">
+                      <h3 class="h3 text-white mb-3"><%= slide.city %></h3>
+                      <figure class="mb-0">
+                        <img src="<%= slide.image %>" class="img-fluid rounded-4 bg-white" alt="<%= slide.city %>">
+                        <figcaption class="small text-white-50 mt-2"><%= slide.caption %></figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-lg-8">
+                      <% slide.cards.forEach((card) => { %>
+                        <div class="card resource-card mb-3">
+                          <div class="card-body">
+                            <h4 class="h5 card-title"><%= card.title %></h4>
+                            <p class="card-text mb-0 text-secondary"><%= card.text %></p>
+                          </div>
+                        </div>
+                      <% }) %>
+                    </div>
+                  </div>
+                </article>
+              <% }) %>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</section>

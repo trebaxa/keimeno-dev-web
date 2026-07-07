@@ -1,0 +1,47 @@
+<section class="section-space section-soft" id="services">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2 class="section-title">Services</h2>
+      </div>
+    </div>
+    <ul class="nav nav-tabs service-tabs mb-4" id="serviceTabs" role="tablist">
+      <% homepage.services.forEach((service, index) => { %>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link <%= index === 0 ? 'active' : '' %>"
+            id="service-<%= service.id %>-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#service-<%= service.id %>"
+            type="button"
+            role="tab"
+            aria-controls="service-<%= service.id %>"
+            aria-selected="<%= index === 0 ? 'true' : 'false' %>"
+          >
+            <%= service.title %>
+          </button>
+        </li>
+      <% }) %>
+    </ul>
+    <div class="tab-content">
+      <% homepage.services.forEach((service, index) => { %>
+        <div
+          class="tab-pane fade <%= index === 0 ? 'show active' : '' %>"
+          id="service-<%= service.id %>"
+          role="tabpanel"
+          aria-labelledby="service-<%= service.id %>-tab"
+        >
+          <div class="row align-items-center g-4">
+            <div class="col-lg-4">
+              <img src="<%= service.image %>" class="img-fluid rounded-4 service-illustration" alt="<%= service.title %>">
+            </div>
+            <div class="col-lg-8">
+              <p class="lead mb-3"><%= service.text %></p>
+              <a href="#resources" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const homepage = require("./data/homepage");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,8 +12,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (request, response) => {
   response.render("pages/index", {
-    pageTitle: "Keimeno Dev Web",
-    currentPage: "home"
+    pageTitle: homepage.meta.title,
+    currentPage: "home",
+    homepage
   });
 });
 

@@ -1,0 +1,23 @@
+<section class="section-space" id="features">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2 class="section-title">Content cards</h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      <% homepage.cards.forEach((card) => { %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card content-card h-100">
+            <img src="<%= card.image %>" class="card-img-top" alt="<%= card.title %>">
+            <div class="card-body">
+              <h3 class="card-title h4"><%= card.title %></h3>
+              <p class="card-text text-secondary"><%= card.text %></p>
+              <a href="#resources" class="btn btn-primary">More</a>
+            </div>
+          </article>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-white border-bottom">
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm fixed-top site-navbar">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="/">Keimeno</a>
+    <a class="navbar-brand fw-bold" href="/">K-THEME</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,17 +14,33 @@
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavigation">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link <%= currentPage === 'home' ? 'active' : '' %>" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#features">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#showcase">Showcase</a>
-        </li>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <% homepage.navigation.forEach((item) => { %>
+          <% if (item.children && item.children.length) { %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="<%= item.href %>" id="nav-<%= item.label.toLowerCase() %>" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <%= item.label %>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="nav-<%= item.label.toLowerCase() %>">
+                <% item.children.forEach((child) => { %>
+                  <li><a class="dropdown-item" href="<%= child.href %>"><%= child.label %></a></li>
+                <% }) %>
+              </ul>
+            </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link <%= item.key === currentPage ? 'active' : '' %>" href="<%= item.href %>"><%= item.label %></a>
+            </li>
+          <% } %>
+        <% }) %>
       </ul>
+      <div class="d-flex align-items-center gap-3">
+        <div class="btn-group btn-group-sm" role="group" aria-label="Language switcher">
+          <% homepage.languages.forEach((language) => { %>
+            <a href="<%= language.href %>" class="btn <%= language.active ? 'btn-primary' : 'btn-outline-secondary' %>"><%= language.label %></a>
+          <% }) %>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

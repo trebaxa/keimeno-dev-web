@@ -1,136 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include("../partials/head", { pageTitle: pageTitle }) %>
+  <%- include("../partials/head", { pageTitle: pageTitle, homepage: homepage }) %>
   <body>
-    <%- include("../partials/header", { currentPage: currentPage }) %>
+    <%- include("../partials/header", { currentPage: currentPage, homepage: homepage }) %>
 
-    <main>
-      <section class="site-header">
-        <div class="container hero">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-              <div class="hero__content">
-                <span class="hero__eyebrow mb-3">
-                  <i class="fa-solid fa-bolt"></i>
-                  Bootstrap 5 + EJS workflow
-                </span>
-                <h1 class="display-4 mb-3">Build maintainable web pages with a simple Node.js setup.</h1>
-                <p class="lead text-secondary mb-4">
-                  This starter includes reusable EJS partials, SCSS with Bootstrap variable overrides,
-                  live reload, GSAP animations and Slick Slider out of the box.
-                </p>
-                <div class="d-flex flex-wrap gap-3">
-                  <a class="btn btn-primary btn-lg px-4" href="#features">Explore features</a>
-                  <a class="btn btn-outline-dark btn-lg px-4" href="#showcase">See the slider</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card hero__card p-4 p-md-5">
-                <div class="card-body">
-                  <h2 class="h4 mb-3">What is included</h2>
-                  <ul class="list-unstyled mb-0">
-                    <li class="d-flex align-items-center gap-3 py-2">
-                      <i class="fa-solid fa-check text-success"></i>
-                      Express development server with BrowserSync live reload
-                    </li>
-                    <li class="d-flex align-items-center gap-3 py-2">
-                      <i class="fa-solid fa-check text-success"></i>
-                      SCSS pipeline with clean Bootstrap customization
-                    </li>
-                    <li class="d-flex align-items-center gap-3 py-2">
-                      <i class="fa-solid fa-check text-success"></i>
-                      Ready-to-use GSAP and Slick Slider integration
-                    </li>
-                    <li class="d-flex align-items-center gap-3 py-2">
-                      <i class="fa-solid fa-check text-success"></i>
-                      Production build that renders static HTML into dist
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="features" class="content-section">
-        <div class="container">
-          <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
-              <h2 class="mb-3">A clean starting point for custom projects</h2>
-              <p class="text-secondary mb-0">
-                The default structure keeps templates, SCSS, JavaScript and assets separated while staying
-                small enough to understand quickly in Visual Studio Code.
-              </p>
-            </div>
-          </div>
-
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="card feature-card p-4">
-                <div class="card-body">
-                  <i class="fa-solid fa-layer-group fa-2x text-primary mb-3"></i>
-                  <h3 class="h5">Reusable partials</h3>
-                  <p class="mb-0 text-secondary">
-                    Shared head, header, navigation and footer files keep page templates easy to extend.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card feature-card p-4">
-                <div class="card-body">
-                  <i class="fa-solid fa-palette fa-2x text-primary mb-3"></i>
-                  <h3 class="h5">Flexible SCSS</h3>
-                  <p class="mb-0 text-secondary">
-                    Override Bootstrap variables before import and keep custom styles in one main entry file.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card feature-card p-4">
-                <div class="card-body">
-                  <i class="fa-solid fa-rocket fa-2x text-primary mb-3"></i>
-                  <h3 class="h5">Fast development loop</h3>
-                  <p class="mb-0 text-secondary">
-                    File changes trigger SCSS compilation, asset syncing and automatic browser refresh.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="showcase" class="pb-5">
-        <div class="container">
-          <div class="row justify-content-center text-center mb-4">
-            <div class="col-lg-7">
-              <h2 class="mb-3">Included demo slider</h2>
-              <p class="text-secondary mb-0">
-                Slick Slider is wired in and ready for image or content carousels.
-              </p>
-            </div>
-          </div>
-
-          <div class="js-showcase-slider">
-            <article class="slider-card">
-              <h3 class="h5">Responsive components</h3>
-              <p class="mb-0 text-secondary">Use Bootstrap utilities and layout primitives to move quickly.</p>
-            </article>
-            <article class="slider-card">
-              <h3 class="h5">Static-ready output</h3>
-              <p class="mb-0 text-secondary">The build script renders EJS pages into plain HTML files in dist.</p>
-            </article>
-            <article class="slider-card">
-              <h3 class="h5">Local asset flow</h3>
-              <p class="mb-0 text-secondary">JavaScript and images are copied into public for development use.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+    <main class="page-main">
+      <%- include("../partials/sections/hero-carousel", { homepage: homepage }) %>
+      <%- include("../partials/sections/intro", { homepage: homepage }) %>
+      <%- include("../partials/sections/content-cards", { homepage: homepage }) %>
+      <%- include("../partials/sections/story", { homepage: homepage }) %>
+      <%- include("../partials/sections/services-tabs", { homepage: homepage }) %>
+      <%- include("../partials/sections/gallery", { homepage: homepage }) %>
+      <%- include("../partials/sections/stats", { homepage: homepage }) %>
+      <%- include("../partials/sections/breaker", { breaker: homepage.breakers[0] }) %>
+      <%- include("../partials/sections/progress", { homepage: homepage }) %>
+      <%- include("../partials/sections/resources-intro", { homepage: homepage }) %>
+      <%- include("../partials/sections/resources-tabs", { homepage: homepage }) %>
+      <%- include("../partials/sections/breaker", { breaker: homepage.breakers[1] }) %>
     </main>
 
     <%- include("../partials/footer") %>

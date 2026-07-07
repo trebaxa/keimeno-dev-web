@@ -1,0 +1,6 @@
+<div id="newsletter_box">
+<form role="form" action="<% $HTA_CMSFIXLINKS.GE_URL %>" method="POST">
+<input class="form-control" type="email" name="FORM[email]" aria-label="Email address">
+<input type="hidden" name="cmd" value="add_to_newsletter">
+</form>
+</div>

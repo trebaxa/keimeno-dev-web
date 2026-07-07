@@ -1,6 +1,7 @@
 const ejs = require("ejs");
 const fs = require("fs-extra");
 const path = require("path");
+const homepage = require("../data/homepage");
 
 const rootDir = path.join(__dirname, "..");
 const viewsDir = path.join(rootDir, "views");
@@ -12,8 +13,9 @@ const pages = [
     template: "index.ejs",
     output: "index.html",
     data: {
-      pageTitle: "Keimeno Dev Web",
-      currentPage: "home"
+      pageTitle: homepage.meta.title,
+      currentPage: "home",
+      homepage
     }
   }
 ];

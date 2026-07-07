@@ -1,0 +1,15 @@
+<section class="stats-strip py-5">
+  <div class="container">
+    <div class="row g-4">
+      <% homepage.stats.forEach((item) => { %>
+        <div class="col-6 col-md-3 text-center">
+          <div class="stats-icon">
+            <i class="fa-solid <%= item.icon %>" aria-hidden="true"></i>
+          </div>
+          <h3 class="mb-1"><%= item.value %></h3>
+          <p class="mb-0 text-secondary"><%= item.label %></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

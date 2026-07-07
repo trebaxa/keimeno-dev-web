@@ -29,12 +29,84 @@ const vendorCopies = [
     to: path.join(vendorDir, "slick", "slick.css")
   },
   {
+    from: path.join(rootDir, "node_modules", "@fancyapps", "ui", "dist", "fancybox", "fancybox.css"),
+    to: path.join(vendorDir, "fancybox", "fancybox.css")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fancyapps", "ui", "dist", "fancybox", "fancybox.umd.js"),
+    to: path.join(vendorDir, "fancybox", "fancybox.umd.js")
+  },
+  {
     from: path.join(rootDir, "node_modules", "@fortawesome", "fontawesome-free", "css", "all.min.css"),
     to: path.join(vendorDir, "fontawesome", "css", "all.min.css")
   },
   {
     from: path.join(rootDir, "node_modules", "@fortawesome", "fontawesome-free", "webfonts"),
     to: path.join(vendorDir, "fontawesome", "webfonts")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "raleway", "files", "raleway-latin-400-normal.woff2"),
+    to: path.join(vendorDir, "fonts", "raleway", "raleway-latin-400-normal.woff2")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "raleway", "files", "raleway-latin-400-normal.woff"),
+    to: path.join(vendorDir, "fonts", "raleway", "raleway-latin-400-normal.woff")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "raleway", "files", "raleway-latin-ext-400-normal.woff2"),
+    to: path.join(vendorDir, "fonts", "raleway", "raleway-latin-ext-400-normal.woff2")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "raleway", "files", "raleway-latin-ext-400-normal.woff"),
+    to: path.join(vendorDir, "fonts", "raleway", "raleway-latin-ext-400-normal.woff")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "raleway", "files", "raleway-latin-600-normal.woff2"),
+    to: path.join(vendorDir, "fonts", "raleway", "raleway-latin-600-normal.woff2")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "raleway", "files", "raleway-latin-600-normal.woff"),
+    to: path.join(vendorDir, "fonts", "raleway", "raleway-latin-600-normal.woff")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "raleway", "files", "raleway-latin-ext-600-normal.woff2"),
+    to: path.join(vendorDir, "fonts", "raleway", "raleway-latin-ext-600-normal.woff2")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "raleway", "files", "raleway-latin-ext-600-normal.woff"),
+    to: path.join(vendorDir, "fonts", "raleway", "raleway-latin-ext-600-normal.woff")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "roboto-condensed", "files", "roboto-condensed-latin-400-normal.woff2"),
+    to: path.join(vendorDir, "fonts", "roboto-condensed", "roboto-condensed-latin-400-normal.woff2")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "roboto-condensed", "files", "roboto-condensed-latin-400-normal.woff"),
+    to: path.join(vendorDir, "fonts", "roboto-condensed", "roboto-condensed-latin-400-normal.woff")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "roboto-condensed", "files", "roboto-condensed-latin-ext-400-normal.woff2"),
+    to: path.join(vendorDir, "fonts", "roboto-condensed", "roboto-condensed-latin-ext-400-normal.woff2")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "roboto-condensed", "files", "roboto-condensed-latin-ext-400-normal.woff"),
+    to: path.join(vendorDir, "fonts", "roboto-condensed", "roboto-condensed-latin-ext-400-normal.woff")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "roboto-condensed", "files", "roboto-condensed-latin-700-normal.woff2"),
+    to: path.join(vendorDir, "fonts", "roboto-condensed", "roboto-condensed-latin-700-normal.woff2")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "roboto-condensed", "files", "roboto-condensed-latin-700-normal.woff"),
+    to: path.join(vendorDir, "fonts", "roboto-condensed", "roboto-condensed-latin-700-normal.woff")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "roboto-condensed", "files", "roboto-condensed-latin-ext-700-normal.woff2"),
+    to: path.join(vendorDir, "fonts", "roboto-condensed", "roboto-condensed-latin-ext-700-normal.woff2")
+  },
+  {
+    from: path.join(rootDir, "node_modules", "@fontsource", "roboto-condensed", "files", "roboto-condensed-latin-ext-700-normal.woff"),
+    to: path.join(vendorDir, "fonts", "roboto-condensed", "roboto-condensed-latin-ext-700-normal.woff")
   }
 ];
 

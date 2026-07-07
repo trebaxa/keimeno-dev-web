@@ -14,11 +14,10 @@
             <button
               class="nav-link <%= groupIndex === 0 ? 'active' : '' %>"
               id="resource-<%= group.id %>-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#resource-<%= group.id %>"
+              data-resource-slide="<%= groupIndex %>"
               type="button"
               role="tab"
-              aria-controls="resource-<%= group.id %>"
+              aria-controls="resource-slide-<%= group.id %>"
               aria-selected="<%= groupIndex === 0 ? 'true' : 'false' %>"
             >
               <%= group.label %>
@@ -27,14 +26,9 @@
         <% }) %>
       </ul>
 
-      <div class="tab-content">
+      <div class="resource-groups-slider js-resource-groups-slider">
         <% homepage.resourceGroups.forEach((group, groupIndex) => { %>
-          <div
-            class="tab-pane fade <%= groupIndex === 0 ? 'show active' : '' %>"
-            id="resource-<%= group.id %>"
-            role="tabpanel"
-            aria-labelledby="resource-<%= group.id %>-tab"
-          >
+          <div class="resource-group-slide" id="resource-slide-<%= group.id %>" role="tabpanel" aria-labelledby="resource-<%= group.id %>-tab">
             <div class="resource-slider js-resource-slider">
               <% group.slides.forEach((slide) => { %>
                 <article class="resource-slide">

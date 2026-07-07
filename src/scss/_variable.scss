@@ -1,0 +1,51 @@
+$font-family-sans-serif: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$headings-font-family: "Roboto Condensed", "Arial Narrow", "Segoe UI", sans-serif;
+$headings-font-weight: 700;
+$link-decoration: none;
+
+$primary: #8da8f3;
+$secondary: #8fb8a6;
+$success: #9ecfb8;
+$info: #9fc7d8;
+$warning: #efd8a2;
+$danger: #e7b0ad;
+$light: #fffaf6;
+$dark: #5f6f73;
+$body-bg: #fffdfb;
+$body-color: #5f6368;
+
+$surface-soft: #f6f2fb;
+$surface-panel: rgba(255, 250, 246, 0.84);
+$surface-page-top: #fdf7f2;
+$surface-page-mid: #f6f0fb;
+$surface-page-bottom: #fbfcf8;
+$surface-hero: #eef2fb;
+$surface-card: #fffdf9;
+$surface-dark-panel: #5e6f78;
+
+$accent-lilac: #c8b8f2;
+$accent-sage: #b9d3c3;
+$accent-peach: #f3c6b8;
+$accent-butter: #f5e5b8;
+$accent-sky: #bfdceb;
+
+$shadow-soft: 0 1rem 2.4rem rgba(126, 123, 146, 0.12);
+$shadow-strong: 0 2rem 4rem rgba(126, 123, 146, 0.18);
+
+$border-radius: 1rem;
+$border-radius-lg: 1.4rem;
+$btn-border-radius: 999px;
+$navbar-padding-y: 1rem;
+
+$section-space-y: 5.5rem;
+$hero-image-height: min(78vh, 48rem);
+$content-max-width: 40rem;
+
+$panel-border-color: rgba($primary, 0.08);
+$eyebrow-background: rgba(255, 255, 255, 0.16);
+$hero-overlay:
+  linear-gradient(90deg, rgba(96, 111, 115, 0.68) 0%, rgba(96, 111, 115, 0.2) 60%, rgba(96, 111, 115, 0.06) 100%);
+$page-background:
+  radial-gradient(circle at top left, rgba($primary, 0.12), transparent 24%),
+  radial-gradient(circle at top right, rgba($accent-peach, 0.16), transparent 28%),
+  linear-gradient(180deg, $surface-page-top 0%, $surface-page-mid 52%, $surface-page-bottom 100%);

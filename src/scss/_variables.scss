@@ -1,13 +1,1 @@
-$font-family-sans-serif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-$primary: #1f5eff;
-$secondary: #0f172a;
-$success: #21a67a;
-$light: #f8fafc;
-$dark: #0b1220;
-$body-bg: #ffffff;
-$body-color: #1f2937;
-$border-radius: 1rem;
-$btn-border-radius: 999px;
-$navbar-padding-y: 1rem;
-$headings-font-weight: 700;
-$link-decoration: none;
+@forward "./variable";

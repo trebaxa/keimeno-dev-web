@@ -8,6 +8,7 @@
   <meta name="description" content="Keimeno CMS Demo: a fast, lightweight content platform with Bootstrap 5, reusable templates and a clean editorial workflow.">
   <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="/assets/vendor/slick/slick.css">
+  <link rel="stylesheet" href="/assets/vendor/fancybox/fancybox.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -376,79 +377,111 @@
         <h2 class="section-title">Gallery</h2>
       </div>
     </div>
-    <div class="row g-4">
+    <div class="masonry-gallery">
       
-        <div class="col-6 col-md-4 col-lg-3">
-          <article class="gallery-card card border-0 overflow-hidden h-100">
-            <img src="/assets/images/gallery-1.svg" class="card-img" alt="Desert horizon">
-            <div class="card-img-overlay d-flex align-items-end">
-              <h3 class="card-title h6 mb-0">Desert horizon</h3>
-            </div>
-          </article>
-        </div>
+        <a
+          href="/assets/images/gallery-1.svg"
+          class="gallery-card card border-0 overflow-hidden masonry-gallery__item gallery-card--1"
+          data-fancybox="homepage-gallery"
+          data-caption="Desert horizon"
+          aria-label="Open Desert horizon"
+        >
+          <img src="/assets/images/gallery-1.svg" class="card-img" alt="Desert horizon">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h3 class="card-title h6 mb-0">Desert horizon</h3>
+          </div>
+        </a>
       
-        <div class="col-6 col-md-4 col-lg-3">
-          <article class="gallery-card card border-0 overflow-hidden h-100">
-            <img src="/assets/images/gallery-2.svg" class="card-img" alt="Studio portrait">
-            <div class="card-img-overlay d-flex align-items-end">
-              <h3 class="card-title h6 mb-0">Studio portrait</h3>
-            </div>
-          </article>
-        </div>
+        <a
+          href="/assets/images/gallery-2.svg"
+          class="gallery-card card border-0 overflow-hidden masonry-gallery__item gallery-card--2"
+          data-fancybox="homepage-gallery"
+          data-caption="Studio portrait"
+          aria-label="Open Studio portrait"
+        >
+          <img src="/assets/images/gallery-2.svg" class="card-img" alt="Studio portrait">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h3 class="card-title h6 mb-0">Studio portrait</h3>
+          </div>
+        </a>
       
-        <div class="col-6 col-md-4 col-lg-3">
-          <article class="gallery-card card border-0 overflow-hidden h-100">
-            <img src="/assets/images/gallery-3.svg" class="card-img" alt="Modern interface">
-            <div class="card-img-overlay d-flex align-items-end">
-              <h3 class="card-title h6 mb-0">Modern interface</h3>
-            </div>
-          </article>
-        </div>
+        <a
+          href="/assets/images/gallery-3.svg"
+          class="gallery-card card border-0 overflow-hidden masonry-gallery__item gallery-card--3"
+          data-fancybox="homepage-gallery"
+          data-caption="Modern interface"
+          aria-label="Open Modern interface"
+        >
+          <img src="/assets/images/gallery-3.svg" class="card-img" alt="Modern interface">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h3 class="card-title h6 mb-0">Modern interface</h3>
+          </div>
+        </a>
       
-        <div class="col-6 col-md-4 col-lg-3">
-          <article class="gallery-card card border-0 overflow-hidden h-100">
-            <img src="/assets/images/gallery-4.svg" class="card-img" alt="Night drive">
-            <div class="card-img-overlay d-flex align-items-end">
-              <h3 class="card-title h6 mb-0">Night drive</h3>
-            </div>
-          </article>
-        </div>
+        <a
+          href="/assets/images/gallery-4.svg"
+          class="gallery-card card border-0 overflow-hidden masonry-gallery__item gallery-card--4"
+          data-fancybox="homepage-gallery"
+          data-caption="Night drive"
+          aria-label="Open Night drive"
+        >
+          <img src="/assets/images/gallery-4.svg" class="card-img" alt="Night drive">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h3 class="card-title h6 mb-0">Night drive</h3>
+          </div>
+        </a>
       
-        <div class="col-6 col-md-4 col-lg-3">
-          <article class="gallery-card card border-0 overflow-hidden h-100">
-            <img src="/assets/images/gallery-5.svg" class="card-img" alt="Editorial layout">
-            <div class="card-img-overlay d-flex align-items-end">
-              <h3 class="card-title h6 mb-0">Editorial layout</h3>
-            </div>
-          </article>
-        </div>
+        <a
+          href="/assets/images/gallery-5.svg"
+          class="gallery-card card border-0 overflow-hidden masonry-gallery__item gallery-card--1"
+          data-fancybox="homepage-gallery"
+          data-caption="Editorial layout"
+          aria-label="Open Editorial layout"
+        >
+          <img src="/assets/images/gallery-5.svg" class="card-img" alt="Editorial layout">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h3 class="card-title h6 mb-0">Editorial layout</h3>
+          </div>
+        </a>
       
-        <div class="col-6 col-md-4 col-lg-3">
-          <article class="gallery-card card border-0 overflow-hidden h-100">
-            <img src="/assets/images/gallery-6.svg" class="card-img" alt="City atlas">
-            <div class="card-img-overlay d-flex align-items-end">
-              <h3 class="card-title h6 mb-0">City atlas</h3>
-            </div>
-          </article>
-        </div>
+        <a
+          href="/assets/images/gallery-6.svg"
+          class="gallery-card card border-0 overflow-hidden masonry-gallery__item gallery-card--2"
+          data-fancybox="homepage-gallery"
+          data-caption="City atlas"
+          aria-label="Open City atlas"
+        >
+          <img src="/assets/images/gallery-6.svg" class="card-img" alt="City atlas">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h3 class="card-title h6 mb-0">City atlas</h3>
+          </div>
+        </a>
       
-        <div class="col-6 col-md-4 col-lg-3">
-          <article class="gallery-card card border-0 overflow-hidden h-100">
-            <img src="/assets/images/gallery-7.svg" class="card-img" alt="Product concept">
-            <div class="card-img-overlay d-flex align-items-end">
-              <h3 class="card-title h6 mb-0">Product concept</h3>
-            </div>
-          </article>
-        </div>
+        <a
+          href="/assets/images/gallery-7.svg"
+          class="gallery-card card border-0 overflow-hidden masonry-gallery__item gallery-card--3"
+          data-fancybox="homepage-gallery"
+          data-caption="Product concept"
+          aria-label="Open Product concept"
+        >
+          <img src="/assets/images/gallery-7.svg" class="card-img" alt="Product concept">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h3 class="card-title h6 mb-0">Product concept</h3>
+          </div>
+        </a>
       
-        <div class="col-6 col-md-4 col-lg-3">
-          <article class="gallery-card card border-0 overflow-hidden h-100">
-            <img src="/assets/images/gallery-8.svg" class="card-img" alt="Campaign visual">
-            <div class="card-img-overlay d-flex align-items-end">
-              <h3 class="card-title h6 mb-0">Campaign visual</h3>
-            </div>
-          </article>
-        </div>
+        <a
+          href="/assets/images/gallery-8.svg"
+          class="gallery-card card border-0 overflow-hidden masonry-gallery__item gallery-card--4"
+          data-fancybox="homepage-gallery"
+          data-caption="Campaign visual"
+          aria-label="Open Campaign visual"
+        >
+          <img src="/assets/images/gallery-8.svg" class="card-img" alt="Campaign visual">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h3 class="card-title h6 mb-0">Campaign visual</h3>
+          </div>
+        </a>
       
     </div>
   </div>
@@ -597,11 +630,10 @@
             <button
               class="nav-link active"
               id="resource-france-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#resource-france"
+              data-resource-slide="0"
               type="button"
               role="tab"
-              aria-controls="resource-france"
+              aria-controls="resource-slide-france"
               aria-selected="true"
             >
               France
@@ -612,11 +644,10 @@
             <button
               class="nav-link "
               id="resource-germany-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#resource-germany"
+              data-resource-slide="1"
               type="button"
               role="tab"
-              aria-controls="resource-germany"
+              aria-controls="resource-slide-germany"
               aria-selected="false"
             >
               Germany
@@ -627,11 +658,10 @@
             <button
               class="nav-link "
               id="resource-test-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#resource-test"
+              data-resource-slide="2"
               type="button"
               role="tab"
-              aria-controls="resource-test"
+              aria-controls="resource-slide-test"
               aria-selected="false"
             >
               Test
@@ -640,14 +670,9 @@
         
       </ul>
 
-      <div class="tab-content">
+      <div class="resource-groups-slider js-resource-groups-slider">
         
-          <div
-            class="tab-pane fade show active"
-            id="resource-france"
-            role="tabpanel"
-            aria-labelledby="resource-france-tab"
-          >
+          <div class="resource-group-slide" id="resource-slide-france" role="tabpanel" aria-labelledby="resource-france-tab">
             <div class="resource-slider js-resource-slider">
               
                 <article class="resource-slide">
@@ -725,12 +750,7 @@
             </div>
           </div>
         
-          <div
-            class="tab-pane fade "
-            id="resource-germany"
-            role="tabpanel"
-            aria-labelledby="resource-germany-tab"
-          >
+          <div class="resource-group-slide" id="resource-slide-germany" role="tabpanel" aria-labelledby="resource-germany-tab">
             <div class="resource-slider js-resource-slider">
               
                 <article class="resource-slide">
@@ -772,12 +792,7 @@
             </div>
           </div>
         
-          <div
-            class="tab-pane fade "
-            id="resource-test"
-            role="tabpanel"
-            aria-labelledby="resource-test-tab"
-          >
+          <div class="resource-group-slide" id="resource-slide-test" role="tabpanel" aria-labelledby="resource-test-tab">
             <div class="resource-slider js-resource-slider">
               
                 <article class="resource-slide">
@@ -861,6 +876,7 @@
   <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/vendor/gsap/gsap.min.js"></script>
   <script src="/assets/vendor/slick/slick.min.js"></script>
+  <script src="/assets/vendor/fancybox/fancybox.umd.js"></script>
   <script src="/js/main.js"></script>
 </footer>
 

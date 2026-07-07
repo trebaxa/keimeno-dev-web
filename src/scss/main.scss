@@ -1,4 +1,5 @@
-@use "./variables" as *;
+@use "./variable" as *;
+@use "./fonts";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 html {
@@ -8,9 +9,7 @@ html {
 body {
   min-height: 100vh;
   padding-top: 5.5rem;
-  background:
-    radial-gradient(circle at top left, rgba($primary, 0.12), transparent 24%),
-    linear-gradient(180deg, #fbfcff 0%, #f4f7fc 52%, #ffffff 100%);
+  background: $page-background;
 }
 
 a {
@@ -26,17 +25,17 @@ a {
 }
 
 .section-space {
-  padding: 5.5rem 0;
+  padding: $section-space-y 0;
 }
 
 .section-panel {
-  background-color: rgba(255, 255, 255, 0.72);
-  border-top: 1px solid rgba($primary, 0.08);
-  border-bottom: 1px solid rgba($primary, 0.08);
+  background-color: $surface-panel;
+  border-top: 1px solid $panel-border-color;
+  border-bottom: 1px solid $panel-border-color;
 }
 
 .section-soft {
-  background-color: #f8faff;
+  background-color: $surface-soft;
 }
 
 .section-title {
@@ -56,18 +55,18 @@ a {
 }
 
 .hero-carousel {
-  box-shadow: 0 2rem 4rem rgba(15, 23, 42, 0.12);
+  box-shadow: $shadow-strong;
 }
 
 .hero-carousel__image {
-  height: min(78vh, 48rem);
+  height: $hero-image-height;
   object-fit: cover;
 }
 
 .hero-carousel .carousel-caption {
   inset: 0;
   padding: clamp(2rem, 5vw, 5rem);
-  background: linear-gradient(90deg, rgba(11, 18, 32, 0.72) 0%, rgba(11, 18, 32, 0.18) 60%, rgba(11, 18, 32, 0.05) 100%);
+  background: $hero-overlay;
 }
 
 .hero-carousel__eyebrow {
@@ -76,7 +75,7 @@ a {
   margin-bottom: 1rem;
   padding: 0.5rem 0.85rem;
   border-radius: 999px;
-  background-color: rgba(255, 255, 255, 0.16);
+  background-color: $eyebrow-background;
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
@@ -86,15 +85,15 @@ a {
 
 .hero-carousel .display-4,
 .hero-carousel .lead {
-  max-width: 40rem;
+  max-width: $content-max-width;
 }
 
 .content-card,
 .gallery-card,
 .resource-card {
   border: 0;
-  border-radius: 1.4rem;
-  box-shadow: 0 1.1rem 2.5rem rgba(15, 23, 42, 0.08);
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-soft;
 }
 
 .content-card .card-img-top {
@@ -115,13 +114,41 @@ a {
 
 .service-illustration {
   background-color: #fff;
-  box-shadow: 0 1rem 2.4rem rgba(15, 23, 42, 0.08);
+  box-shadow: $shadow-soft;
+}
+
+.masonry-gallery {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+.masonry-gallery__item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
 }
 
 .gallery-card .card-img {
-  aspect-ratio: 4 / 3;
+  width: 100%;
   object-fit: cover;
   transition: transform 0.35s ease;
+}
+
+.gallery-card--1 .card-img {
+  aspect-ratio: 4 / 5;
+}
+
+.gallery-card--2 .card-img {
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-card--3 .card-img {
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-card--4 .card-img {
+  aspect-ratio: 16 / 11;
 }
 
 .gallery-card .card-img-overlay {
@@ -135,8 +162,8 @@ a {
 
 .stats-strip {
   background-color: rgba(255, 255, 255, 0.78);
-  border-top: 1px solid rgba($primary, 0.08);
-  border-bottom: 1px solid rgba($primary, 0.08);
+  border-top: 1px solid $panel-border-color;
+  border-bottom: 1px solid $panel-border-color;
 }
 
 .stats-icon {
@@ -192,6 +219,14 @@ a {
   background: linear-gradient(135deg, #122033 0%, #0b1220 100%);
 }
 
+.resource-groups-slider {
+  margin-inline: -0.75rem;
+}
+
+.resource-group-slide {
+  padding-inline: 0.75rem;
+}
+
 .resource-slider {
   margin-inline: -0.75rem;
 }
@@ -214,16 +249,49 @@ a {
 
 .resource-slider .slick-dots {
   position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
   margin-top: 1.5rem;
+  padding-left: 0;
+  list-style: none;
 }
 
-.resource-slider .slick-dots li button:before {
-  color: rgba(255, 255, 255, 0.5);
-  opacity: 1;
+.resource-slider .slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0;
 }
 
-.resource-slider .slick-dots li.slick-active button:before {
-  color: #fff;
+.resource-slider .slick-dots li button {
+  width: 0.85rem;
+  height: 0.85rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.26);
+  font-size: 0;
+  line-height: 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.resource-slider .slick-dots li button::before {
+  display: none;
+}
+
+.resource-slider .slick-dots li.slick-active button {
+  background-color: #fff;
+  transform: scale(1.18);
+}
+
+.resource-slider .slick-dots li button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.resource-groups-slider .slick-list,
+.resource-slider .slick-list {
+  overflow: hidden;
 }
 
 .site-footer {
@@ -238,6 +306,10 @@ a {
   .hero-carousel .carousel-caption {
     justify-content: end;
   }
+
+  .masonry-gallery {
+    column-count: 2;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -251,5 +323,20 @@ a {
 
   .hero-carousel .lead {
     font-size: 1rem;
+  }
+
+  .masonry-gallery {
+    column-count: 1;
+    column-gap: 1rem;
+  }
+
+  .masonry-gallery__item {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .masonry-gallery {
+    column-count: 4;
   }
 }

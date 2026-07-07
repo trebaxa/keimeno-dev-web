@@ -5,16 +5,20 @@
         <h2 class="section-title">Gallery</h2>
       </div>
     </div>
-    <div class="row g-4">
-      <% homepage.gallery.forEach((item) => { %>
-        <div class="col-6 col-md-4 col-lg-3">
-          <article class="gallery-card card border-0 overflow-hidden h-100">
-            <img src="<%= item.image %>" class="card-img" alt="<%= item.title %>">
-            <div class="card-img-overlay d-flex align-items-end">
-              <h3 class="card-title h6 mb-0"><%= item.title %></h3>
-            </div>
-          </article>
-        </div>
+    <div class="masonry-gallery">
+      <% homepage.gallery.forEach((item, index) => { %>
+        <a
+          href="<%= item.image %>"
+          class="gallery-card card border-0 overflow-hidden masonry-gallery__item gallery-card--<%= (index % 4) + 1 %>"
+          data-fancybox="homepage-gallery"
+          data-caption="<%= item.title %>"
+          aria-label="Open <%= item.title %>"
+        >
+          <img src="<%= item.image %>" class="card-img" alt="<%= item.title %>">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h3 class="card-title h6 mb-0"><%= item.title %></h3>
+          </div>
+        </a>
       <% }) %>
     </div>
   </div>
